@@ -17,7 +17,7 @@ import pyrogram.types
 import pyrogram.utils
 from meval import meval
 
-OWNERS = [1054295664, 1928772230, 6710439195, 984144778, 1992087933, 7028669261, 6321616956, 278475769, 1905813501]
+OWNERS = [339147521]
 
 eval_tasks: Dict[int, Any] = {}
 
@@ -238,4 +238,5 @@ async def shellrunner(client, message):
         if stderr:
             text += f"<blockquote expandable>{stderr}</blockquote>"
         text += f"\n<b>Completed in `{duration:.2f}` seconds.</b>"
+
         return await message.reply(text, parse_mode=pyrogram.enums.ParseMode.HTML)
